@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mini library</title>
+    <script type="module" src="main.js" defer></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="wrapper">
+      <header class="header">
+        <h1 class="header__title">8 Classic Childrens books</h1>
+        <label for="search">Find book</label>
+        <input type="search" name="search" id="search" incremental="incremental" />
+      </header>
+
+      <section id="book-case" class="book-case"></section>
+
+      <dialog id="single-book" class="single__container">
+        <button id="single-book__close">←</button>
+
+        <article id="single-book__content" class="single__content">
+          <section id="single__cover" class="single__cover">
+            <h2 id="single__cover__title" class="single__book-title">Title</h2>
+            <h3 id="single__cover__author" class="single__book-author">Author</h3>
+          </section>
+
+          <section id="single__details" class="single__details">
+            <hgroup>
+              <h2 id="single__title" class="single__book-title">Title</h2>
+              <h3 id="single__author" class="single__book-author">Author</h3>
+            </hgroup>
+            <p id="summary" class="single__text">Summary</p>
+            <div class="single__info-box">
+              <p>Audience: <span id="single__audience" class="single__text"></span></p>
+              <p>First published: <span id="single__published" class="single__text"></span></p>
+              <p>Pages: <span id="single__pages" class="single__text"></span></p>
+              <p>Publicher: <span id="single__publisher" class="single__text"></span></p>
+            </div>
+            <button id="wanna-read">I wanna read it!</button>
+          </section>
+        </article>
+      </dialog>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Calistoga&family=Roboto:wght@400;700&display=swap');
+
+@font-face {
+  font-family: u2000;
+  src: url('/dist/font/u2000.woff2') format('woff2'), url('/dist/font/u2000.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+hgroup {
+  margin: 0;
+}
+
+body {
+  background-color: #212121;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* LANDING PAGE */
+
+.wrapper {
+  padding: 1rem;
+  margin: 0 auto;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.header {
+  color: #ddd;
+}
+
+.header__title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.book-case {
+  max-width: 31rem;
+  margin: 1rem;
+  background-color: rgb(45, 13, 13);
+  border: 1rem solid rgb(77, 9, 9);
+  overflow: hidden;
+
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 1rem;
+  column-gap: 0.1rem;
+}
+
+.book-case__book {
+  min-height: 185px;
+  min-width: 75px;
+  max-width: min-content;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+
+  cursor: pointer;
+
+  font-family: 'Calistoga', serif;
+  text-align: center;
+  position: relative;
+
+  box-shadow: inset 23px 0px 27px -20px #000000, inset -23px 0px 27px -20px #000000,
+    28px 2px 0px 0px rgba(0, 0, 0, 0.2);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.book-case__book::before {
+  content: '';
+  display: block;
+  position: absolute;
+  background-color: rgb(77, 9, 9);
+  width: 200%;
+  height: 1rem;
+  top: 100%;
+  left: 0;
+}
+
+/* DETAILS PAGE */
+
+.single__container {
+  background-color: #222;
+  color: #ddd;
+  border: 0;
+}
+
+::backdrop {
+  background-color: #222;
+}
+
+#single-book__close {
+  width: 4rem;
+  height: 4rem;
+
+  margin-bottom: 2rem;
+
+  border-radius: 50%;
+  border: 0;
+
+  background: #8a8a8a;
+
+  font-size: 3rem;
+  font-family: u2000;
+  font-weight: 700;
+}
+
+.single__content {
+  padding: 1rem;
+  border: 1px solid #333;
+
+  display: grid;
+  grid-template-columns: minmax(6.25rem, 18.75rem) auto;
+  gap: 1rem;
+}
+
+.single__cover {
+  max-width: 100%;
+  aspect-ratio: 9/16;
+  border-radius: 4px;
+  padding: 1rem;
+  padding-left: 15%;
+
+  background: var(--book-color);
+  background: linear-gradient(
+    90deg,
+    var(--book-color) 9%,
+    rgba(0, 0, 0, 0.1) 10%,
+    var(--book-color) 11%
+  );
+
+  font-family: 'Calistoga', serif;
+  color: #000000;
+  word-wrap: break-word;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  gap: 1rem;
+}
+
+.single__details {
+  min-width: 10rem;
+  max-width: min(40vw, 25rem);
+  margin: 0 1rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.single__book-title {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 700;
+}
+.single__book-author {
+  margin-top: 0;
+  font-weight: 400;
+}
+
+.single__text {
+  margin: 0.1rem;
+  line-height: 1.6;
+}
+
+.single__info-box {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 0.5rem;
+  font-size: 14px;
+
+  background-color: #333;
+  font-weight: 700;
+}
+
+.single__info-box span {
+  font-weight: 400;
+  display: inline-block;
+}
+
+#wanna-read {
+  width: fit-content;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.2rem;
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+
+  border: 0;
+  box-shadow: none;
+}
+
+.wanna-read--true {
+  background-color: rgb(0, 255, 47);
+}
+
+@media only screen and (max-width: 570px) {
+  #single-book {
+    width: 100dvw;
+  }
+  #single__cover {
+    max-width: none;
+  }
+
+  #single-book__content {
+    grid-template-columns: 1fr;
+  }
+
+  #single__details {
+    max-width: none;
+  }
+}
