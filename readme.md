@@ -1,5 +1,11 @@
 # Mini library
 
+## Inlämning
+
+Inlämnad klockan 12.10 den 3 januari 2024. Jag anser mig ha uppfyllt kraven för väl godkänt.
+
+Länk till sidan på github pages: https://mattiasrensmo.github.io/yh_mini-library/dist/
+
 ## Instruktioner
 
 Du ska göra ett bibliotek av barnböcker. Man ska kunna se alla böcker och klicka sig vidare och få mer information.
